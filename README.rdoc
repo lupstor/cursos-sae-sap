@@ -13,4 +13,4 @@ Este proyecto esta desarrollado en Ruby On Rails
 ruby v 2.0
 rails v 4.0.3
 
-Por: Herber Vasquez
+Por: Herber Vasquez.
