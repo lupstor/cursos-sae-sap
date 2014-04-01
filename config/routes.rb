@@ -1,6 +1,5 @@
 CursosSaeSap::Application.routes.draw do
 
-
   #Session routes
   match '/signup',  to: 'usuarios#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
@@ -13,6 +12,9 @@ CursosSaeSap::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
 
 
+  #User routes
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :usuarios
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
