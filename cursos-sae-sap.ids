@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails cursos-sae-sap: development" uuid="cb4d70ad-2ace-443e-af8b-cf2c76f1d342">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails cursos-sae-sap: test" uuid="91d5e65a-ff97-42ca-843c-e47cc4e7bb6e">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails cursos-sae-sap: production" uuid="cd791a66-35c1-4d73-b534-657a61478fb7">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
