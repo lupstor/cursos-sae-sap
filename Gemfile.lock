@@ -59,6 +59,11 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.9.2)
+    netzke-basepack (0.8.4)
+      netzke-core (~> 0.8.2)
+    netzke-core (0.8.4)
+      execjs
+      uglifier
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.5.2)
@@ -124,6 +129,8 @@ DEPENDENCIES
   faker (= 1.1.2)
   jbuilder (~> 1.2)
   jquery-rails
+  netzke-basepack (~> 0.8.0)
+  netzke-core (~> 0.8.0)
   pg
   rails (= 4.0.3)
   sass-rails (~> 4.0.0)

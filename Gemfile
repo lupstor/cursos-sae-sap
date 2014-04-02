@@ -11,6 +11,10 @@ gem 'bootstrap-will_paginate', '0.0.9'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# EXTJS Netzke javascript framework
+gem 'netzke-core', '~>0.8.0'
+gem 'netzke-basepack', '~>0.8.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

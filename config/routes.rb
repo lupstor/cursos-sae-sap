@@ -1,7 +1,6 @@
 CursosSaeSap::Application.routes.draw do
 
   #Session routes
-  match '/signup',  to: 'usuarios#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
 
@@ -15,6 +14,9 @@ CursosSaeSap::Application.routes.draw do
   #User routes
   resources :sessions, only: [:new, :create, :destroy]
   resources :usuarios
+
+  #Error routes
+  match '/error_request',  to: 'errors#generic',         via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
