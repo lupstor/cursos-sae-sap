@@ -1,3 +1,4 @@
+
 CursosSaeSap::Application.routes.draw do
 
   #Session routes
@@ -5,6 +6,7 @@ CursosSaeSap::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
 
   #Static routes
+  netzke
   root  'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
@@ -17,6 +19,9 @@ CursosSaeSap::Application.routes.draw do
 
   #Error routes
   match '/error_request',  to: 'errors#generic',         via: 'get'
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -73,3 +78,5 @@ CursosSaeSap::Application.routes.draw do
   #     resources :products
   #   end
 end
+
+
