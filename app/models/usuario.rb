@@ -1,10 +1,17 @@
 class Usuario < ActiveRecord::Base
 
+  attr_accessor           :cambiar_password
+  #attr_accessible         :cambiar_password
+
+  #attr_accessor :cambiar_password
+  #netzke_attribute :cambiar_password
+
   #Foreign Keys
 
   before_save {
     self.correo = correo.downcase
     self.rol = rol.downcase
+    self.nombre = self.nombre.split(" ").map(&:capitalize).join(" ")
   }
 
   before_create :create_remember_token
@@ -17,7 +24,7 @@ class Usuario < ActiveRecord::Base
   validates :rol, presence: true, length: {maximum: 50}
   validates :estado_usuario, presence: true
   has_secure_password
-  validates :password, length: {minimum: 6}
+  validates :password, length: {minimum: 6} ,:on => :create
 
   def Usuario.new_remember_token
     SecureRandom.urlsafe_base64
@@ -25,6 +32,13 @@ class Usuario < ActiveRecord::Base
 
   def Usuario.hash(token)
     Digest::SHA1.hexdigest(token.to_s)
+  end
+
+  def cambiar_password
+      @cambiar_password
+  end
+  def cambiar_password=(cambiar_password)
+    @cambiar_password = cambiar_password
   end
 
 

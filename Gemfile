@@ -14,6 +14,7 @@ gem 'pg'
 # EXTJS Netzke javascript framework
 gem 'netzke-core', '~> 0.10.0.rc2'
 gem 'netzke-basepack', '~> 0.10.0.rc2'
+gem 'protected_attributes'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

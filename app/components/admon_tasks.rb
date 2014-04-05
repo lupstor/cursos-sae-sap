@@ -6,13 +6,22 @@ class AdmonTasks < Netzke::Base
 
   component :usuarios do |c|
     c.klass = UsuariosCrud
-
     c.title = "Usuarios"
+  end
+
+  component :cursos do |c|
+    c.klass = CursosCrud
+    c.title = "Cursos"
+  end
+
+  component :salones do |c|
+    c.klass = SalonesCrud
+    c.title = "Salones"
   end
 
   def configure(c)
     super
-    c.items = [:usuarios]
+    c.items = [:cursos,:usuarios,:salones]
   end
 
 end
