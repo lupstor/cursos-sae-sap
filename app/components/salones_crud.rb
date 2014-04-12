@@ -1,4 +1,4 @@
-class SalonesCrud<Netzke::Basepack::Grid
+class SalonesCrud < Netzke::Basepack::Grid
 
   def configure(c)
     super

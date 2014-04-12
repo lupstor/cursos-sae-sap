@@ -7,6 +7,10 @@ class Usuario < ActiveRecord::Base
   #netzke_attribute :cambiar_password
 
   #Foreign Keys
+  has_many :asignaciones, foreign_key: "usuario_id",
+           class_name:  "Asignacion",
+           dependent:   :destroy
+
 
   before_save {
     self.correo = correo.downcase
@@ -21,7 +25,8 @@ class Usuario < ActiveRecord::Base
 
   validates :nombre, presence: true, length: {maximum: 50}
   validates :correo, presence: true, format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
-  validates :rol, presence: true, length: {maximum: 50}
+  validates :rol, presence: true, length: {maximum: 50}, inclusion: { in: %w(admon profesor secretaria),
+                                                                      message: "%{value} Rol no valido" }
   validates :estado_usuario, presence: true
   has_secure_password
   validates :password, length: {minimum: 6} ,:on => :create

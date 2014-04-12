@@ -134,7 +134,7 @@ DEPENDENCIES
   netzke-basepack (~> 0.10.0.rc2)
   netzke-core (~> 0.10.0.rc2)
   pg
-  protected_attributes
+  protected_attributes (~> 1.0.7)
   rails (= 4.0.3)
   sass-rails (~> 4.0.0)
   sdoc

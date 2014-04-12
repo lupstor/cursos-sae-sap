@@ -12,9 +12,12 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'pg'
 
 # EXTJS Netzke javascript framework
-gem 'netzke-core', '~> 0.10.0.rc2'
-gem 'netzke-basepack', '~> 0.10.0.rc2'
-gem 'protected_attributes'
+#Netzke
+gem "netzke-core", "~> 0.10.0.rc2"
+gem "netzke-basepack", "~> 0.10.0.rc2"
+
+#Protected Attributes
+gem 'protected_attributes', '~> 1.0.7'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

@@ -22,5 +22,7 @@ module CursosSaeSap
     #config.i18n.enforce_available_locales = false
     #config.encoding = "iso-8859-1"
 
+    config.time_zone = 'Central America'
+
   end
 end
