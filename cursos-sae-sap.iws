@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fedcb130-f799-4ac9-97c6-672a9c8a4093" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/menus/_anuncios.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/anuncio.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/anuncio_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/anuncios/javascripts/anuncios.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/anuncios.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/anuncios.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/login.css.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/asignaciones.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.generators" afterPath="$PROJECT_DIR$/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/menus/_admon.html.erb" afterPath="$PROJECT_DIR$/app/views/menus/_admon.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/menus/_profesor.html.erb" afterPath="$PROJECT_DIR$/app/views/menus/_profesor.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/menus/_secretaria.html.erb" afterPath="$PROJECT_DIR$/app/views/menus/_secretaria.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/admon_tasks.rb" afterPath="$PROJECT_DIR$/app/components/admon_tasks.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/asignacion.rb" afterPath="$PROJECT_DIR$/app/models/asignacion.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/asignaciones_crud.rb" afterPath="$PROJECT_DIR$/app/components/asignaciones_crud.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cursos-sae-sap.iml" afterPath="$PROJECT_DIR$/cursos-sae-sap.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cursos-sae-sap.ipr" afterPath="$PROJECT_DIR$/cursos-sae-sap.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cursos-sae-sap.iws" afterPath="$PROJECT_DIR$/cursos-sae-sap.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/form_asignacion.rb" afterPath="$PROJECT_DIR$/app/components/form_asignacion.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/validators/range_date_validator.rb" afterPath="$PROJECT_DIR$/app/models/validators/range_date_validator.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/usuario.rb" afterPath="$PROJECT_DIR$/app/models/usuario.rb" />
     </list>
     <ignored path="cursos-sae-sap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1124,7 +1096,7 @@
       <workItem from="1397523210335" duration="446000" />
       <workItem from="1397523694402" duration="806000" />
       <workItem from="1397527892921" duration="18951000" />
-      <workItem from="1397612404325" duration="13819000" />
+      <workItem from="1397612404325" duration="13840000" />
     </task>
     <task id="LOCAL-00001" summary="Readme commit">
       <created>1396315896722</created>
@@ -1162,11 +1134,15 @@
       <created>1397285140558</created>
       <updated>1397285140558</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Validacion traslape de fechas de salones y horarios de profesores">
+      <created>1397670415067</created>
+      <updated>1397670415067</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156008000" />
+    <option name="totallyTimeSpent" value="156029000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1207,6 +1183,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815734" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1217,7 +1194,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1403,6 +1379,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
