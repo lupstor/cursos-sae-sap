@@ -1,7 +1,9 @@
+require 'time'
 class RangeDateValidator < ActiveModel::Validator
 
   def validate(record)
 
+    #Verifica que las fechas ingresadas sean validas
     if !record.fecha_inicio.nil? and !record.fecha_fin.nil?
       inicio = record.fecha_inicio
       fin = record.fecha_fin
@@ -10,15 +12,18 @@ class RangeDateValidator < ActiveModel::Validator
       end
     end
 
+    #Verifica que las horas ingresadas sean validas
     if !record.hora_inicio.nil? and !record.hora_fin.nil?
-      hora_inicio = record.hora_inicio
-      hora_fin = record.hora_fin
+      #Convierte formato de hora de la siguiente manera: 7:00 PM a 19:00
+      hora_inicio = Time.parse(record.hora_inicio.to_s).strftime("%H:%M:%S")
+      hora_fin = Time.parse(record.hora_fin.to_s).strftime("%H:%M:%S")
 
       if hora_inicio >= hora_fin
         record.errors[:hora_inicio] << ": Hora de inicio no puede ser mayor ni igual que hora de fin"
       end
     end
 
+    #Verifica que exista por lo menos un dia seleccionado
     if !record.lunes and !record.martes and !record.miercoles and !record.jueves and !record.viernes and !record.sabado and !record.domingo
       record.errors[:curso] << ": Debe seleccionar por lo menos un dia"
       return
@@ -55,13 +60,13 @@ class RangeDateValidator < ActiveModel::Validator
       condicion_dias = agregar_validacion_dia(condicion_dias, "sabado", record.sabado)
       condicion_dias = agregar_validacion_dia(condicion_dias, "domingo", record.domingo)
 
-      parametros_de_consulta ={usuario_id: record.usuario_id, curso_id: record.curso_id, salon_id: record.salon_id,
-                               fecha_inicio: record.fecha_inicio, fecha_fin: record.fecha_fin, hora_inicio: record.hora_inicio,
-                               hora_fin: record.hora_fin, lunes: record.lunes, martes: record.martes, miercoles: record.miercoles,
-                               jueves: record.jueves, viernes: record.viernes, sabado: record.sabado, domingo: record.domingo}
+      parametros_de_consulta ={usuario_id: record.usuario_id, curso_id: record.curso_id, salon_id: record.salon_id, id: record.id,
+                               fecha_inicio: record.fecha_inicio, fecha_fin: record.fecha_fin,
+                               hora_inicio: Time.parse(record.hora_inicio.to_s).strftime("%H:%M:%S"), hora_fin: Time.parse(record.hora_fin.to_s).strftime("%H:%M:%S"),
+                               lunes: record.lunes, martes: record.martes, miercoles: record.miercoles, jueves: record.jueves, viernes: record.viernes, sabado: record.sabado, domingo: record.domingo}
 
       query_traslape =" AND((fecha_inicio >= :fecha_inicio  AND fecha_fin <= :fecha_fin)
-                       OR (fecha_inicio <= :fecha_inicio AND fecha_fin >= fecha_fin)
+                       OR (fecha_inicio <= :fecha_inicio AND fecha_fin >= :fecha_fin)
                        OR (fecha_inicio <= :fecha_inicio AND fecha_fin > :fecha_inicio AND fecha_fin <= :fecha_fin)
                        OR  (fecha_inicio >= :fecha_inicio AND fecha_inicio < :fecha_fin AND fecha_fin >= :fecha_fin)
                        )
@@ -69,7 +74,7 @@ class RangeDateValidator < ActiveModel::Validator
                        OR  (hora_inicio <= :hora_inicio AND hora_fin >= :hora_fin )
                        OR  (hora_inicio <= :hora_inicio AND hora_fin > :hora_inicio AND hora_fin <= :hora_fin )
                        OR  (hora_inicio >= :hora_inicio AND hora_inicio < :hora_fin AND hora_fin >= :hora_fin)
-                       )"+(condicion_dias.length > 0 ? "AND ("+ condicion_dias +")" : "")
+                       )"+(condicion_dias.length > 0 ? " AND ("+ condicion_dias +")" : "") + (!record.id.nil? ? " AND (id != :id)" : "" )#Si es update excluye asignacion de validacion
 
       tipo_traslape = "salon_id = :salon_id"
       traslapes_salon = Asignacion.where(tipo_traslape +" "+ query_traslape ,parametros_de_consulta)
@@ -101,9 +106,10 @@ class RangeDateValidator < ActiveModel::Validator
 
 
       if traslapes_profesor.count > 0
-        record.errors[:usuario_id] << ": Al profesor #{Usuario.find(record.usuario_id).nombre} se le traslapan los siguientes cursos en su horario: "+ (cursos_traslapados.length > 0 ? cursos_traslapados[0...-2] : "")
+        record.errors[:usuario_id] << ": Al profesor #{Usuario.find(record.usuario_id).nombre}
+                                         se le traslapan los siguientes cursos en su horario: "+
+                                         (cursos_traslapados.length > 0 ? cursos_traslapados[0...-2] : "")
       end
-
 
     end
   end
@@ -118,7 +124,6 @@ class RangeDateValidator < ActiveModel::Validator
     end
     return condicion
   end
-
 
 end
 

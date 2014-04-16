@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- FONTAWESOME ---------- */
+/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
+/* ---------- http://weloveiconfonts.com/ ---------- */
+
+@charset "UTF-8";
+@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  src: url('http://weloveiconfonts.com/api/fonts/fontawesome/fontawesome-webfont.eot');
+  src: url('http://weloveiconfonts.com/api/fonts/fontawesome/fontawesome-webfont.eot?#iefix') format('eot'), url('http://weloveiconfonts.com/api/fonts/fontawesome/fontawesome-webfont.woff') format('woff'), url('http://weloveiconfonts.com/api/fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'), url('http://weloveiconfonts.com/api/fonts/fontawesome/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+}
+
+
+.fontawesome-lock:before {
+  content: "\f023"
+}
+
+
+/* ---------- ERIC MEYER'S RESET CSS ---------- */
+/* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
+
+
+/* ---------- FONTAWESOME ---------- */
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+
+h1,h2,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* ---------- GENERAL ---------- */
+
+body {
+  color: #000;
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+input {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+}
+
+/* ---------- LOGIN ---------- */
+
+#login {
+  margin: 50px auto;
+  width: 400px;
+  padding-top: 0px;
+}
+
+#login h2 {
+  background-color: #1a6dba;
+  -webkit-border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 0 0;
+  color: #fff;
+  font-size: 28px;
+  padding: 20px 26px;
+}
+
+#login h2 span[class*="fontawesome-"] {
+  margin-right: 14px;
+}
+
+#login fieldset {
+  background-color: #fff;
+  -webkit-border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
+  border-radius: 0 0 20px 20px;
+  padding: 20px 26px;
+}
+
+#login fieldset p {
+  color: #777;
+  margin-bottom: 14px;
+}
+
+#login fieldset p:last-child {
+  margin-bottom: 0;
+}
+
+#login fieldset input {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #eee;
+  color: #777;
+  padding: 4px 10px;
+  width: 328px;
+}
+
+
+
+#login fieldset input[type="submit"] {
+  background-color: #33cc77;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  padding: 4px 0;
+  width: 100px;
+}
+
+#login fieldset input[type="submit"]:hover {
+  background-color: #28ad63;
+}

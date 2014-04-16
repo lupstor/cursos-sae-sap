@@ -3,10 +3,10 @@
 <head>
 
     <title>Cursos SAE/SAP</title>
-    <%= load_netzke %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+    <%= load_netzke theme: "neptune"%>
 
 </head>
 <body>
@@ -15,10 +15,20 @@
     <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
     <% end %>
+    <div class="mid-right">
+        <div id="anuncios_div"/>
+
+    </div>
     <%= yield %>
+
+
     <%= render 'layouts/footer' %>
-    <%= debug(params) if Rails.env.development? %>
+    <!--
+     <%= debug(params) if Rails.env.development? %> -->
 
 </div>
+
+
+
 </body>
 </html>

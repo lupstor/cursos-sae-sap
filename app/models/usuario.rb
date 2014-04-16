@@ -11,6 +11,9 @@ class Usuario < ActiveRecord::Base
            class_name:  "Asignacion",
            dependent:   :destroy
 
+  has_many :anuncios, foreign_key: "usuario_id",
+           class_name:  "Anuncio",
+           dependent:   :destroy
 
   before_save {
     self.correo = correo.downcase

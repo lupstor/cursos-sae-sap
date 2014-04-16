@@ -3,10 +3,6 @@ class AdmonTasks < Netzke::Base
   js_configure do |c|
     c.extend = "Ext.tab.Panel"
   end
-  component :asignaciones do |c|
-    c.klass = AsignacionesCrud
-    c.title = "Asignaciones"
-  end
 
   component :usuarios do |c|
     c.klass = UsuariosCrud
@@ -25,7 +21,7 @@ class AdmonTasks < Netzke::Base
 
   def configure(c)
     super
-   c.items = [:asignaciones,:cursos,:usuarios,:salones]
+   c.items = [:cursos,:usuarios,:salones]
   end
 
 end

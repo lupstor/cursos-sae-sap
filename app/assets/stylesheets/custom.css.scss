@@ -1,9 +1,7 @@
-$grayLight: #eaeaea;
+@import "bootstrap";
+
 $grayMediumLight: #eaeaea;
-$grayLighter: #eaeaea;
-$gray: #eaeaea;
-$grayDarker: rgba(70, 70, 70, 0.65);
-$blue: #152cea;
+
 
 /* universal */
 
@@ -252,3 +250,15 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+
+.panel-container {
+  float: left;
+}
+
+#anuncios_div {
+  float: right;
+}
+
+
+

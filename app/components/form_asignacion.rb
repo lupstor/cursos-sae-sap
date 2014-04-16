@@ -21,7 +21,7 @@ class FormAsignacion< Netzke::Basepack::Form
         },
         {
             field_label: 'Profesor',
-            name: "usuario__nombre", scope: ->(relation) { relation.where(rol: "profesor") }
+            name: "usuario__nombre", scope: ->(relation) { relation.where(rol: "profesor" ,id: session[:user_id]) }
         },
         {
             field_label: 'Salon',

@@ -28,6 +28,9 @@ module SessionsHelper
   def current_user
     remember_token = Usuario.hash(cookies[:remember_token])
     @current_user ||= Usuario.find_by(remember_token: remember_token)
+
+    session[:user_id] = @current_user.id if !@current_user.nil?
+    return @current_user;
   end
 
   def current_user?(user)

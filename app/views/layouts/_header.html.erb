@@ -1,15 +1,15 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse" style="background-color: #000066;">
     <div class="navbar-inner">
         <div class="container">
             <%= link_to "Cursos SAE/SAP", root_path, id: "logo",method: :get %>
             <nav>
                 <ul class="nav pull-right">
-                    <li><%= link_to "Home", root_path,method: :get %></li>
+                    <li><%= link_to "Principal", root_path,method: :get %></li>
                     <li><%= link_to "Ayuda", help_path %></li>
                     <% if signed_in? %>
                         <li id="fat-menu" class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Account <b class="caret"></b>
+                                Cuenta <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
 
